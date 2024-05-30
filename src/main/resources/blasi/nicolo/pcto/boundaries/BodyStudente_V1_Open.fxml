@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="MainBorderPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1031.0" style="-fx-background-color: #fffcf2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blasi.nicolo.pcto.boundaries.Controller">
+   <left>
+      <Pane id="MenuLeftPanel" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #ccc5b9;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="studentName" alignment="CENTER" editable="false" layoutX="43.0" layoutY="568.0" prefHeight="31.0" prefWidth="152.0" promptText="LOADING ERROR" style="-fx-background-color: #ccc5b9;">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="52.0" layoutY="164.0" text="PCTOrganizer" textFill="#252422">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="185.0" fitWidth="250.0" layoutX="3.0" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/logo.png" />
+               </image>
+            </ImageView>
+            <ComboBox layoutX="35.0" layoutY="268.0" prefHeight="32.0" prefWidth="180.0" promptText="ANNI PRECEDENTI" style="-fx-background-color: #fffcf2;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <Separator layoutX="26.0" layoutY="311.0" prefWidth="200.0" style="-fx-background-color: #eb5e28;" />
+            <Button accessibleRoleDescription="aziendeButton" alignment="CENTER" layoutX="35.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#onAziendaClickStudent" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #fffcf2;" text="LE TUE AZIENDE" textAlignment="CENTER">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button accessibleRoleDescription="pFButton" alignment="CENTER" layoutX="35.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onProgettiClick" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #fffcf2;" text="PROGETTO FORMATIVO" textAlignment="CENTER">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="70.0" fitWidth="87.0" layoutX="80.0" layoutY="505.0" onMouseClicked="#onAvatarClick" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/avatar2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Button accessibleRoleDescription="pFButton" alignment="CENTER" layoutX="35.0" layoutY="467.0" mnemonicParsing="false" onMouseClicked="#onTutorClick" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #fffcf2;" text="TUTOR" textAlignment="CENTER">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="14.0" layoutY="565.0" onMouseClicked="#onLogoutClick" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/password-23-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="199.0" layoutY="565.0" onMouseClicked="#onHelpClick" preserveRatio="true">
+               <image>
+                  <Image fx:id="helpButton" url="@IMG/help-158-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField fx:id="currentYear" alignment="CENTER" editable="false" layoutX="35.0" layoutY="227.0" prefWidth="180.0" style="-fx-background-color: #fffcf2;" text="&lt;LOADING ERROR&gt;">
+               <font>
+                  <Font name="Futura Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Button fx:id="anagraficaButton" accessibleRoleDescription="aziendeButton" alignment="CENTER" layoutX="35.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#onAnagraficaClick" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #fffcf2;" text="LA TUA ANAGRAFICA" textAlignment="CENTER">
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="modificaDati" onMouseClicked="#onModifyClick" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Group fx:id="mainGroup" layoutX="5.0" layoutY="19.0">
+               <children>
+                  <ImageView fitHeight="127.0" fitWidth="154.0" layoutX="9.0" layoutY="9.0" preserveRatio="true">
+                     <image>
+                        <Image url="@IMG/avatar2.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <TextField fx:id="studentName1" editable="false" layoutX="151.0" layoutY="44.0" promptText="LOADING ERROR" style="-fx-background-color: #fffcf2;">
+                     <font>
+                        <Font name="ITF Devanagari Marathi Medium" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Separator layoutX="80.0" layoutY="167.0" prefHeight="1.0" prefWidth="569.0" style="-fx-background-color: #eb5e28;" />
+                  <Button id="modifyButton" layoutX="592.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#onModifyClick" style="-fx-background-color: #fffcf2;">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" preserveRatio="true">
+                           <image>
+                              <Image url="@IMG/modify-8-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Modifica le informazioni" />
+                     </tooltip>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="comuneNascitaField" alignment="CENTER" editable="false" layoutX="80.0" layoutY="242.0" promptText="&lt;comune&gt;" style="-fx-background-color: #fffcf2;" />
+                  <Text layoutX="84.0" layoutY="228.4929962158203" strokeType="OUTSIDE" strokeWidth="0.0" text="COMUNE DI NASCITA'">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="comuneResidenza" alignment="CENTER" editable="false" layoutX="250.0" layoutY="242.0" promptText="&lt;codiceFiscale&gt;" style="-fx-background-color: #fffcf2;" />
+                  <Text layoutX="256.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMUNE RESIDENZA">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="dataNascitaField" alignment="CENTER" editable="false" layoutX="417.0" layoutY="242.0" promptText="&lt;dataNascita&gt;" style="-fx-background-color: #fffcf2;" />
+                  <Text layoutX="433.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA DI NASCITA'">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="75.0" layoutY="314.0" prefHeight="1.0" prefWidth="569.0" style="-fx-background-color: #eb5e28;" />
+                  <Pane id="preferenzePanel" layoutX="96.0" layoutY="356.0" prefHeight="183.0" prefWidth="241.0" style="-fx-background-color: #ccc5b9; -fx-border-color: #eb5e28;">
+                     <children>
+                        <Text layoutX="31.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PREFERENZE LAVORATIVE">
+                           <font>
+                              <Font name="Futura Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="preferenzeSectionButton" contentDisplay="RIGHT" layoutX="45.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#onNotImplementedClick" style="-fx-background-color: #eb5e28; -fx-text-fill: #fffcf2;" text="VAI ALLA SEZIONE">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="22.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@IMG/arrow-32-48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Futura Bold" size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView layoutX="97.0" layoutY="40.0">
+                           <image>
+                              <Image url="@IMG/agency-00-48.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="preferenzePanel" layoutX="376.0" layoutY="356.0" prefHeight="183.0" prefWidth="241.0" style="-fx-background-color: #ccc5b9; -fx-border-color: #eb5e28;">
+                     <children>
+                        <Text layoutX="77.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOCUMENTI">
+                           <font>
+                              <Font name="Futura Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="100.0" layoutY="43.0" preserveRatio="true">
+                           <image>
+                              <Image url="@IMG/document-128-48.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="preferenzeSection" contentDisplay="RIGHT" layoutX="46.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#onDOCClick" style="-fx-background-color: #eb5e28; -fx-text-fill: #fffcf2;" text="VAI ALLA SEZIONE">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="22.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@IMG/arrow-32-48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Futura Bold" size="11.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <TextField editable="false" layoutX="170.0" layoutY="111.0" promptText="&lt;classe studente&gt;" style="-fx-background-color: #fffcf2;">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Pane fx:id="logoutPane" layoutX="237.0" layoutY="236.0" prefHeight="129.0" prefWidth="328.0" style="-fx-background-color: #ccc5b9;" visible="false">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <TextField alignment="CENTER" editable="false" layoutX="30.0" layoutY="14.0" prefHeight="26.0" prefWidth="269.0" style="-fx-background-color: #ccc5b9;" text="SICURO DI EFFETTUARE IL LOGOUT ?">
+                           <font>
+                              <Font name="Futura Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="denyButton" layoutX="40.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#onDenyClick" style="-fx-background-color: #fffcf2;" text="Annulla" />
+                        <Button fx:id="logoutButton" layoutX="224.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #eb5e28;" text="ESCI">
+                           <font>
+                              <Font name="Futura Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="aziendaGroup" layoutX="95.0" layoutY="103.0" visible="false">
+               <children>
+                  <TextField editable="false" style="-fx-background-color: #fffcf2;" text="AZIENDA">
+                     <font>
+                        <Font name="Futura Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="96.0" style="-fx-background-color: #fffcf2;" text="RAGIONE SOCIALE">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="61.0" layoutY="131.0" promptText="&lt;ragione sociale&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="187.0" style="-fx-background-color: #fffcf2;" text="SEDE TIROCINIO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="61.0" layoutY="222.0" promptText="&lt;sede tirocinio&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="278.0" style="-fx-background-color: #fffcf2;" text="TOPIC">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="313.0" promptText="&lt;topic&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="95.0" style="-fx-background-color: #fffcf2;" text="TUTOR SCOLASTICO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="130.0" promptText="&lt;tutor scolastico&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="186.0" style="-fx-background-color: #fffcf2;" text="TUTOR AZIENDALE">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="221.0" promptText="&lt;tutor aziendale&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="274.0" style="-fx-background-color: #fffcf2;" text="PROGETTO FORMATIVO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="noteField" alignment="TOP_LEFT" editable="false" layoutX="44.0" layoutY="309.0" prefHeight="85.0" prefWidth="271.0" promptText="&lt;progetto formativo&gt;" style="-fx-background-color: #fffcf2;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </Group>
+            <Group fx:id="progettoGroup" layoutX="95.0" layoutY="103.0" visible="false">
+               <children>
+                  <TextField editable="false" style="-fx-background-color: #fffcf2;" text="PROGETTO FORMATIVO">
+                     <font>
+                        <Font name="Futura Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="187.0" style="-fx-background-color: #fffcf2;" text="DATE DEL PROGETTO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="61.0" layoutY="222.0" promptText="&lt;sede tirocinio&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="95.0" style="-fx-background-color: #fffcf2;" text="TOPIC">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="61.0" layoutY="130.0" promptText="&lt;topic&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="95.0" style="-fx-background-color: #fffcf2;" text="TUTOR SCOLASTICO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="130.0" promptText="&lt;tutor scolastico&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="186.0" style="-fx-background-color: #fffcf2;" text="TUTOR AZIENDALE">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="221.0" promptText="&lt;tutor aziendale&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="274.0" style="-fx-background-color: #fffcf2;" text="PROGETTO FORMATIVO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="noteField1" alignment="TOP_LEFT" editable="false" layoutX="44.0" layoutY="309.0" prefHeight="85.0" prefWidth="271.0" promptText="&lt;progetto formativo&gt;" style="-fx-background-color: #fffcf2;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="376.0" layoutY="274.0" style="-fx-background-color: #fffcf2;" text="SEDE DEL PROGETTO">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="393.0" layoutY="309.0" promptText="&lt;sede tirocinio&gt;" style="-fx-background-color: #fffcf2;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+               </children>
+            </Group>
+            <Group fx:id="tutorGroup" layoutX="95.0" layoutY="103.0" visible="false">
+               <children>
+                  <TextField editable="false" layoutX="13.0" layoutY="9.0" style="-fx-background-color: #fffcf2;" text="IL TUO TUTOR">
+                     <font>
+                        <Font name="Futura Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <ImageView fitHeight="196.0" fitWidth="174.0" layoutY="128.0" preserveRatio="true">
+                     <image>
+                        <Image url="@IMG/avatar2.png" />
+                     </image>
+                  </ImageView>
+                  <TextField editable="false" layoutX="164.0" layoutY="185.0" promptText="MARIO ROSSI" style="-fx-background-color: #fffcf2;">
+                     <font>
+                        <Font name="Futura Bold" size="21.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Button layoutX="364.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#onPrenotaCLick" style="-fx-background-color: #eb5e28; -fx-text-fill: #fffcf2;" text="PRENOTA UN INCONTRO" textAlignment="CENTER">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField editable="false" layoutX="169.0" layoutY="224.0" style="-fx-background-color: #fffcf2;" text="ITTIS Alessandro VOLTA">
+                     <font>
+                        <Font name="ITF Devanagari Marathi Medium" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </Group>
+            <Pane layoutX="237.0" layoutY="236.0" prefHeight="129.0" prefWidth="328.0" style="-fx-background-color: #ccc5b9;" visible="false">
+               <children>
+                  <TextField editable="false" layoutX="30.0" layoutY="24.0" prefHeight="26.0" prefWidth="269.0" style="-fx-background-color: #ccc5b9;" text="SICURO DI EFFETTUARE IL LOGOUT ?">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Button layoutX="40.0" layoutY="75.0" mnemonicParsing="false" style="-fx-background-color: #fffcf2;" text="Annulla">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="224.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #eb5e28;" text="ESCI">
+                     <font>
+                        <Font name="Futura Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Group fx:id="documentiGroup" visible="false">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="777.0" style="-fx-background-color: fffcf2;">
+                     <children>
+                        <Pane layoutX="141.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ccc5b9; -fx-border-color: eb5e28;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="17.0" layoutY="31.0" prefHeight="32.0" prefWidth="167.0" style="-fx-background-color: FFFCF2;" text="CV">
+                                 <font>
+                                    <Font name="Futura Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextField>
+                              <Button layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onCvupClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="120.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onCvdownClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/download.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="409.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ccc5b9; -fx-border-color: eb5e28;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="17.0" layoutY="31.0" prefHeight="32.0" prefWidth="167.0" style="-fx-background-color: FFFCF2;" text="LETTERA MOTIVAZIONALE">
+                                 <font>
+                                    <Font name="Futura Bold" size="11.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextField>
+                              <Button layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onLmupClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="120.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onLmdownClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/download.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="141.0" layoutY="322.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ccc5b9; -fx-border-color: eb5e28;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="17.0" layoutY="31.0" prefHeight="32.0" prefWidth="167.0" style="-fx-background-color: FFFCF2;" text="CARTA D'IDENTITÀ">
+                                 <font>
+                                    <Font name="Futura Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextField>
+                              <Button layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onCiupClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="120.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onCidownClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/download.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="409.0" layoutY="322.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ccc5b9; -fx-border-color: eb5e28;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="17.0" layoutY="31.0" prefHeight="32.0" prefWidth="167.0" style="-fx-background-color: FFFCF2;" text="TESSERA SANITARIA">
+                                 <font>
+                                    <Font name="Futura Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextField>
+                              <Button layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onTsupClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="120.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onTsdownClick" prefHeight="46.0" prefWidth="52.0" style="-fx-background-color: fffcf2;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@IMG/download.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <TextField alignment="CENTER" editable="false" layoutX="283.0" layoutY="33.0" prefHeight="27.0" prefWidth="184.0" promptText="&lt;LOADING ERROR&gt;" style="-fx-background-color: fffcf2;" text="I TUOI DOCUMENTI">
+                           <font>
+                              <Font name="Futura Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
